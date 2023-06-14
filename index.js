@@ -109,7 +109,7 @@ async function main() {
 
   form.addEventListener('submit', (e) => {
     // Prevent the default form redirect
-    // e.preventDefault();
+    e.preventDefault();
     // Write a new message to the database collection "guestbook"
     addDoc(collection(db, 'guestbook'), {
       text: input.value,
